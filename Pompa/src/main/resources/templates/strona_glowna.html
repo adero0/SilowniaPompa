@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siłownia Pompa - Twoje miejsce do treningu, zdrowia i siły!">
+    <meta name="keywords" content="siłownia, fitness, trening, zdrowie, Pompa, kulturystyka">
+    <meta name="author" content="Siłownia Pompa">
+    <title>Siłownia Pompa - Twoje miejsce do treningu</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<header>
+    <h1>Siłownia Pompa</h1>
+    <h1 th:if="${username != null}">Witaj, <span th:text="${username}"></span>!</h1>
+    <p>Twoje miejsce do treningu, zdrowia i siły!</p>
+</header>
+
+<nav>
+    <a href="#o-nas">O nas</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#kontakt">Kontakt</a>
+    <a th:href="@{/login}"> Zaloguj się</a>
+    <a th:href="@{/register}"> Zarejestruj się</a>
+</nav>
+<div class="hero">
+    Witaj w Siłowni Pompa!
+</div>
+
+<div class="container">
+    <section id="o-nas" class="section">
+        <h2>O nas</h2>
+        <p>Siłownia Pompa to nowoczesny klub fitness, który pomoże Ci osiągnąć Twoje cele. Posiadamy nowoczesny sprzęt, wykwalifikowanych trenerów i szeroką ofertę zajęć grupowych.</p>
+    </section>
+
+    <!-- Sekcja "Oferta" -->
+    <section id="oferta" class="section">
+        <h2>Nasza oferta</h2>
+        <ul>
+            <li>Trening personalny z doświadczonymi instruktorami</li>
+            <li>Zajęcia fitness: joga, pilates, spinning</li>
+            <li>Nowoczesny sprzęt siłowy i cardio</li>
+            <li>Dietetyk i plan żywieniowy</li>
+        </ul>
+    </section>
+
+    <!-- Sekcja "Galeria" -->
+    <section id="galeria" class="section">
+        <h2>Galeria</h2>
+        <p>Zobacz naszą siłownię i poczuj klimat!</p>
+        <img src='images/zyzz.jpg' alt="Siłownia Pompa" style="display: block; margin: 0 auto; border-radius: 8px;">
+    </section>
+
+    <!-- Sekcja "Kontakt" -->
+    <section id="kontakt" class="section">
+        <h2>Kontakt</h2>
+        <p>Odwiedź nas lub skontaktuj się telefonicznie:</p>
+        <ul>
+            <li><strong>Adres:</strong> ul. Sportowa 10, 00-000 Miasto</li>
+            <li><strong>Telefon:</strong> +48 123 456 789</li>
+            <li><strong>Email:</strong> kontakt@silowniapompa.pl</li>
+        </ul>
+    </section>
+</div>
+
+<!-- Stopka -->
+<footer>
+    <p>"Reasumując wszystkie aspekty kwintesencji tematu dochodzę do fundamentalnej konkluzji: warto chodzić na siłownię Pompa" - Mariusz Pudzianowski</p>
+</footer>
+</body>
+</html>

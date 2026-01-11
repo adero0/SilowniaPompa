@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blank</title>
+    <style>
+        /* Definiowanie czcionki z lokalnego pliku .otf */
+        @font-face {
+            font-family: 'MyCustomFont'; /* Nazwa czcionki */
+            src: url('/fonts/cz.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Zastosowanie niestandardowej czcionki do klasy */
+        .custom-font {
+            font-family: 'MyCustomFont', sans-serif; /* Użycie czcionki */
+            font-size: 36px
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {},
+            plugins: [require('daisyui')],
+            daisyui: {
+                themes: ["dracula", "dim", "forest", "dark", "cyberpunk"],
+            }
+        };
+    </script>
+</head>
+<body class="bg-black-50">
+<header class="navbar bg-primary text-primary-content">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl custom-font" th:href="" style="font-size: 40px">Siłownia Pompa</a>
+    </div>
+    <div class="flex-none">
+        <a class="btn btn-ghost" href="oferta.html">Oferta</a>
+        <button class="btn btn-ghost">Kontakt</button>
+        <a class="btn btn-ghost" href="login.html">Zaloguj się</a>
+        <a class="btn btn-ghost" href="register.html">Zarejestruj się</a>
+    </div>
+</header>
+
+<main class="container mx-auto p-6">
+    <footer class="footer bg-neutral text-neutral-content p-6">
+        <div class="items-center grid-flow-col">
+            <p>Siłownia Pompa &copy; 2025 - Wszystkie prawa zastrzeżone</p>
+        </div>
+        <div class="grid-flow-col gap-4 justify-self-end">
+            <a href="#" class="btn btn-ghost">Polityka Prywatności</a>
+            <a href="#" class="btn btn-ghost">Regulamin</a>
+        </div>
+    </footer>
+</main>
+</body>

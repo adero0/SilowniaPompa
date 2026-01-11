@@ -1,0 +1,30 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2" author="Jakub Akacin">
+
+        <insert tableName="app_user">
+            <column name="email" value="szef@wp.pl"/>
+            <column name="username" value="Szef"/>
+            <column name="password" value="$2a$10$I4mqJRaOD7JKCkS3LEHQrulXgG9MBrQ36WnINItMqQtue3JYts5HO"/>
+            <column name="role" value="SZEF"/>
+            <column name="birthdate" value="1990-01-15"/>
+        </insert>
+        <insert tableName="app_user">
+            <column name="email" value="trener1@gmail.com"/>
+            <column name="username" value="Tomasz"/>
+            <column name="password" value="$2a$10$I4mqJRaOD7JKCkS3LEHQrulXgG9MBrQ36WnINItMqQtue3JYts5HO"/>
+            <column name="role" value="TRENER"/>
+            <column name="birthdate" value="2000-07-20"/>
+        </insert>
+        <insert tableName="trainer_data">
+            <column name="app_user_id" value="1"/>
+            <column name="cost" value="10.20"/>
+            <column name="rating" value="5"/>
+            <column name="rating_desc" value="super ziomek"/>
+            <column name="type" value="pilates"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

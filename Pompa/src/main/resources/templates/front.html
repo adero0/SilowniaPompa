@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siłownia Pompa</title>
+    <style>
+        /* Definiowanie czcionki z lokalnego pliku .otf */
+        @font-face {
+            font-family: 'MyCustomFont'; /* Nazwa czcionki */
+            src: url('/fonts/cz.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Zastosowanie niestandardowej czcionki do klasy */
+        .custom-font {
+            font-family: 'MyCustomFont', sans-serif; /* Użycie czcionki */
+            font-size: 36px
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {},
+            plugins: [require('daisyui')],
+            daisyui: {
+                themes: ["dracula", "dim", "forest", "dark", "cyberpunk"],
+            }
+        };
+    </script>
+</head>
+<body class="bg-black-50">
+<header class="navbar bg-primary text-primary-content">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl custom-font" style="font-size: 40px">Siłownia Pompa</a>
+    </div>
+    <div class="flex-none">
+        <a class="btn btn-ghost" th:href="@{oferta}">Oferta</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=AvbexBeYPOQ&ab_channel=Nervarien">Kontakt</a>
+        <a class="btn btn-ghost" th:href="@{/login}">Zaloguj się</a>
+        <a class="btn btn-ghost" th:href="@{/register}">Zarejestruj się</a>
+    </div>
+</header>
+
+<main class="container mx-auto p-6">
+
+    <section class="text-center py-12">
+        <h1 class="text-4xl font-bold text-primary mb-4">Witaj w Siłowni Pompa!</h1>
+        <p class="text-lg mb-6">Najlepsze miejsce na osiągnięcie swoich celów fitness.</p>
+
+    </section>
+
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-10 my-10 ">
+
+        <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+                <img
+                        src="/images/sprzet.jpg"
+                        alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Sprzęt</h2>
+                <p>Najwyższej klasy sprzęt do dyspozycji naszych klientów!</p>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+                <img
+                        src="/images/trenerzy.jpg"
+                        alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Trenerzy</h2>
+                <p>Na naszej siłowni masz okazję trenować pod okiem najelpszych!</p>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-96 shadow-xl">
+            <figure>
+                <img
+                        src="/images/recepcja.jpg"
+                        alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Plany członkowskie</h2>
+                <p>U nas jest miejsce dla każdego! Studenci mogą liczyć na zniżki, a osoby powyżej wieku 60 lat mają zapewnione darmowe ubezpieczenie.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-12">
+        <h2 class="text-3xl font-bold text-center mb-6">Opinie Naszych Członków</h2>
+        <div class="carousel w-full">
+            <div class="carousel-item w-full">
+                <div class="card bg-secondary text-secondary-content mx-auto max-w-md">
+                    <div class="card-body">
+                        <p>"Siłownia Pompy zmieniła moje życie! Trenerzy są niesamowici, a atmosfera motywująca!"</p>
+                        <footer class="text-right">- Anna</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item w-full">
+                <div class="card bg-purple-700 text-secondary-content mx-auto max-w-md">
+                    <div class="card-body">
+                        <p>"Najlepsza siłownia, w jakiej byłem. Świetny sprzęt i cudowna energia."</p>
+                        <footer class="text-right">- Marek</footer>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="flex items-center justify-center">
+        <div class="card bg-base-100 shadow-xl p-6 max-w-md w-full">
+            <div class="tabs">
+                <a class="tab tab-bordered tab-active">kontakt</a>
+            </div>
+
+            <div class="mt-6">
+                <h2 class="text-2xl font-bold text-center mb-4">Skontaktuj się z nami</h2>
+                <form>
+                    <div class="form-control mb-4">
+                        <label class="label">
+                            <span class="label-text">Imię</span>
+                        </label>
+                        <input type="text" class="input input-bordered w-full" required />
+                    </div>
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text">Nazwisko</span>
+                        </label>
+                        <input type="text"  class="input input-bordered w-full" required />
+                    </div>
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="email"  class="input input-bordered w-full" required />
+                    </div>
+                    <div class="form-control mb-6">
+                        <label class="label">
+                            <span class="label-text">Wiadomość</span>
+                        </label>
+                        <textarea
+
+                                class="textarea textarea-bordered textarea-lg w-full "></textarea>
+                    </div>
+
+
+                    <section class="grid grid-cols-2 md:grid-cols-1 gap-10 my-10 ">
+                        <button type="submit" class="btn btn-primary w-full">Wyślij wiadomość</button>
+
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer bg-neutral text-neutral-content p-6">
+    <div class="items-center grid-flow-col">
+        <p>Siłownia Pompa &copy; 2025 - Wszystkie prawa zastrzeżone</p>
+    </div>
+    <div class="grid-flow-col gap-4 justify-self-end">
+        <a href="#" class="btn btn-ghost">Polityka Prywatności</a>
+        <a href="#" class="btn btn-ghost">Regulamin</a>
+    </div>
+</footer>
+</body>
+</html>

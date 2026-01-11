@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siłownia Pompy</title>
+    <style>
+        /* Definiowanie czcionki z lokalnego pliku .otf */
+        @font-face {
+            font-family: 'MyCustomFont'; /* Nazwa czcionki */
+            src: url('/fonts/cz.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Zastosowanie niestandardowej czcionki do klasy */
+        .custom-font {
+            font-family: 'MyCustomFont', sans-serif; /* Użycie czcionki */
+            font-size: 36px
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {},
+            plugins: [require('daisyui')],
+            daisyui: {
+                themes: ["dracula", "dim", "forest", "dark"],
+            }
+        };
+    </script>
+</head>
+<body class="bg-black-50">
+<header class="navbar bg-primary text-primary-content">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl custom-font" th:href="@{/}" style="font-size: 40px">Siłownia Pompa</a>
+    </div>
+    <div class="flex-none">
+        <button class="btn btn-ghost">Oferta</button>
+        <button class="btn btn-ghost">Kontakt</button>
+        <a class="btn btn-ghost" th:href="@{/login}">Zaloguj się</a>
+        <a class="btn btn-ghost" th:href="@{/register}">Zarejestruj się</a>
+    </div>
+</header>
+
+<main class="container mx-auto p-6">
+    <div class="flex flex-col items-center justify-between min-h-fit">
+        <section class="grid grid-cols-2 md:grid-cols-1 gap-10 my-10 items-center justify-center flex-grow">
+            <div class="mockup-code">
+                <pre data-prefix=">" class="text-base"><code>Ty.Zdobądź_Sylwetkę_Marzeń()</code></pre>
+                <pre data-prefix="!" class="text-warning"><code>FatalError: Nie masz jeszcze karnetu Siłowni Pompa!</code></pre>
+                <pre data-prefix=">" class="text-base"><code>SiłowniaPompa.Kup_karnet(Ty)</code></pre>
+                <pre data-prefix=">" class="text-base"><code>Ty.Zdobądź_Sylwetkę_Marzeń()</code></pre>
+                <pre data-prefix="#" class="text-success"><code>Sukces!</code></pre>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2"  />
+                <div class="collapse-title text-xl font-medium">Karnet Normalny</div>
+                <div class="collapse-content">
+                    <p><b>Miesięczny: </b>250zł/miesięcznie</p>
+                    <p><b>Roczny: </b>190zł/miesięcznie</p>
+                    <p><b>Dozgonny: </b>100zł/miesięcznie</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Karnet Uczniowski/Studencki</div>
+                <div class="collapse-content">
+                    <p><b>Miesięczny: </b>170zł/miesięcznie</p>
+                    <p><b>Roczny: </b>135zł/miesięcznie</p>
+                    <p><b>Dozgonny: </b>90zł/miesięcznie</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Karnet 60+</div>
+                <div class="collapse-content">
+                    <p><b>Miesięczny: </b>250zł/miesięcznie</p>
+                    <p><b>Roczny: </b>190zł/miesięcznie</p>
+                    <p><b>Dozgonny: </b>180zł/miesięcznie</p>
+                    <b class="text-yellow-600">DARMOWE UBEZPIECZENIE W CENIE</b>
+                </div>
+            </div>
+        </section>
+
+        <!-- Przyciski wycentrowane na dole -->
+        <div class="mb-10">
+            <a class="btn btn-primary w-200" href="register.html">Odmień swoje życie TERAZ!</a>
+        </div>
+    </div>
+
+</main>
+<footer class="footer bg-neutral text-neutral-content p-6">
+    <div class="items-center grid-flow-col">
+        <p>Siłownia Pompa &copy; 2025 - Wszystkie prawa zastrzeżone</p>
+    </div>
+    <div class="grid-flow-col gap-4 justify-self-end">
+        <a href="#" class="btn btn-ghost">Polityka Prywatności</a>
+        <a href="#" class="btn btn-ghost">Regulamin</a>
+    </div>
+</footer>
+</body>
+</html>
